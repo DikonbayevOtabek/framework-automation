@@ -20,12 +20,14 @@ public class DriverSingleton {
                     firefoxOptions.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver(firefoxOptions);
+                    break;
                 }
                 default: {
                     ChromeOptions chromeOptions= new ChromeOptions();
                     chromeOptions.setBinary("C:\\Users\\Otabek\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(chromeOptions);
+                    break;
                 }
             }
             driver.manage().window().maximize();
